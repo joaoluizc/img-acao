@@ -199,9 +199,9 @@ const leasure = [
 
 
    const person = [
-    {"type": "Pessoa, profissão ou animal", action: "Cachorro", "points": 2},
-    {"type": "Pessoa, profissão ou animal", action: "Nelson Mandela", "points": 4},
-    {"type": "Pessoa, profissão ou animal", action: "Médico", "points": 2},
+    {"type": "Pessoa", "action": "Cachorro", "points": 2},
+    {"type": "Pessoa", "action": "Nelson Mandela", "points": 4},
+    {"type": "Pessoa", "action": "Médico", "points": 2},
   ];
 
 const categories = [
@@ -216,13 +216,13 @@ const categories = [
 const categoriesMapping = {
   'easy': 'Fácil',
   'object': 'Objeto',
-  'person': 'Pessoa, profissão ou animal',
+  'person': 'Pessoa',
   'action': 'Ação',
   'hard': 'Difícil',
   'leasure': 'Lazer',
   'Fácil': 'easy',
   'Objeto': 'object',
-  'Pessoa, profissão ou animal': 'person',
+  'Pessoa': 'person',
   'Ação': 'action',
   'Difícil': 'hard',
   'Lazer': 'leasure',

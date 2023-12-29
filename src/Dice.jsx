@@ -12,13 +12,14 @@ function Dice() {
   }
 
   return (
-    <>
-      <div>
-        <h3 id='Dado'>Dado</h3>
-        <div id="action">{ dice }</div>
-      </div>
+    <div className='diceWrapper'>
+      
+      
+        <h3 className='dado'>Dado</h3>
+        <div className="action">{ dice }</div>
+      
       <button onClick={ rollDice }>Rolar Dado</button>
-    </>
+    </div>
   )
 }
 
