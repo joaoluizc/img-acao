@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import data from './assets/data';
+import './Card.css';
 
 const initialCard = {
   'person': {"type": "Pessoa, profissão ou animal", action: "Cachorro", points: 1},
@@ -29,7 +30,7 @@ function Card () {
   };
 
   return (
-    <>
+    <div className='cardWrapper'>
     <div className='card'>
       <h2>Card</h2>
       <p>Pessoa, profissão ou animal: { card?.person?.action } { ` ${card?.person?.points} pts.` }</p>
@@ -39,8 +40,8 @@ function Card () {
       <p>Lazer: { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }</p>
       <p>Fácil: { card?.easy?.action } { ` ${card?.easy?.points} pts.` }</p>
     </div>
-    <button onClick={ newCard }>Gerar</button>
-    </>
+    <button id='bution' onClick={ newCard }>Gerar</button>
+    </div>
   )
 }
 
