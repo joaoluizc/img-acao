@@ -209,7 +209,23 @@ const categories = [
   'leasure',
 ];
 
+const categoriesMapping = {
+  'easy': 'Fácil',
+  'object': 'Objeto',
+  'person': 'Pessoa, profissão ou animal',
+  'action': 'Ação',
+  'hard': 'Difícil',
+  'leasure': 'Lazer',
+  'Fácil': 'easy',
+  'Objeto': 'object',
+  'Pessoa, profissão ou animal': 'person',
+  'Ação': 'action',
+  'Difícil': 'hard',
+  'Lazer': 'leasure',
+};
+
 export default {
+  categoriesMapping,
   categories,
   easy,
   object,
