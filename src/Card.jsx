@@ -19,19 +19,24 @@ function Card () {
       const newAction = data[category][Math.floor(Math.random() * data[category].length)];
       return newAction;
     });
-    console.log(newCardData);
+    const newCardDataObject = {};
+    newCardData.forEach((item) => {
+      newCardDataObject[item.type] = item;
+    });
+    // setCard(newCardData);
+    console.log(newCardDataObject);
   };
 
   return (
     <>
     <div className='card'>
       <h2>Card</h2>
-      <p>Pessoa, profissão ou animal: { card.person }</p>
-      <p>Objeto: { card.object }</p>
-      <p>Ação: { card.action }</p>
-      <p>Difícil: { card.hard }</p>
-      <p>Lazer: { card.leasure }</p>
-      <p>Fácil: { card.easy }</p>
+      <p>Pessoa, profissão ou animal: { card.person.action }</p>
+      <p>Objeto: { card.object.action }</p>
+      <p>Ação: { card.action.action }</p>
+      <p>Difícil: { card.hard.action }</p>
+      <p>Lazer: { card.leasure.action }</p>
+      <p>Fácil: { card.easy.action }</p>
     </div>
     <button onClick={ newCard }>Gerar</button>
     </>
