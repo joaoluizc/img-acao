@@ -13,7 +13,7 @@ const initialCard = {
   'easy': {"type": "Fácil", "action": "Sorrir", points: 1},
 };
 
-function Card () {
+function Card ({ addPoints, switchTurn }) {
 
   const [card, setCard] = useState(initialCard);
 
@@ -37,32 +37,62 @@ function Card () {
       <h2>Card</h2>
       <div>
       Pessoa, profissão ou animal: { card?.person?.action } { ` ${card?.person?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.person?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     <div>
       Objeto: { card?.object?.action } { ` ${card?.object?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.object?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     <div>
       Ação: { card?.action?.action } { ` ${card?.action?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.action?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     <div>
       Difícil: { card?.hard?.action } { ` ${card?.hard?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.hard?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     <div>
       Lazer: { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.leasure?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     <div>
       Fácil: { card?.easy?.action } { ` ${card?.easy?.points} pts.` }
-      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button
+        className="thumbs-up"
+        onClick={ () => addPoints(card?.easy?.points) }
+      >
+        <FontAwesomeIcon icon={faThumbsUp} />
+      </button>
       <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
     </div>
     </div>
