@@ -33,12 +33,12 @@ function Card () {
     <div className='cardWrapper'>
     <div className='card'>
       <h2>Card</h2>
-      <p>Pessoa, profissão ou animal: { card?.person?.action } { ` ${card?.person?.points} pts.` }</p>
-      <p>Objeto: { card?.object?.action } { ` ${card?.object?.points} pts.` }</p>
-      <p>Ação: { card?.action?.action } { ` ${card?.action?.points} pts.` }</p>
-      <p>Difícil: { card?.hard?.action } { ` ${card?.hard?.points} pts.` }</p>
-      <p>Lazer: { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }</p>
-      <p>Fácil: { card?.easy?.action } { ` ${card?.easy?.points} pts.` }</p>
+      <p><strong>Pessoa, profissão ou animal: </strong>{ card?.person?.action } { ` ${card?.person?.points} pts.` }</p>
+      <p><strong>Objeto: </strong> { card?.object?.action } { ` ${card?.object?.points} pts.` }</p>
+      <p><strong>Ação: </strong> { card?.action?.action } { ` ${card?.action?.points} pts.` }</p>
+      <p><strong>Difícil: </strong> { card?.hard?.action } { ` ${card?.hard?.points} pts.` }</p>
+      <p><strong>Lazer: </strong> { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }</p>
+      <p><strong>Fácil: </strong> { card?.easy?.action } { ` ${card?.easy?.points} pts.` }</p>
     </div>
     <button id='bution' onClick={ newCard }>Gerar</button>
     </div>

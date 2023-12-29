@@ -1,0 +1,17 @@
+#Dado {
+  
+
+}
+
+button {
+    background-color: #338a5e;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 15%;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+
+}

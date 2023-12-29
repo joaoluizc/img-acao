@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import data from './assets/data';
+import './Dice.css';
 
 function Dice() {
   const [dice, setDice] = useState('');
@@ -13,7 +14,7 @@ function Dice() {
   return (
     <>
       <div>
-        <h3>Dado</h3>
+        <h3 id='Dado'>Dado</h3>
         <div id="action">{ dice }</div>
       </div>
       <button onClick={ rollDice }>Rolar Dado</button>
