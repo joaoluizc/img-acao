@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import data from './assets/data';
 import './Card.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 
 const initialCard = {
   'person': {"type": "Pessoa, profissão ou animal", action: "Cachorro", points: 1},
@@ -33,12 +35,36 @@ function Card () {
     <div className='cardWrapper'>
     <div className='card'>
       <h2>Card</h2>
-      <p><strong>Pessoa, profissão ou animal: </strong>{ card?.person?.action } { ` ${card?.person?.points} pts.` }</p>
-      <p><strong>Objeto: </strong> { card?.object?.action } { ` ${card?.object?.points} pts.` }</p>
-      <p><strong>Ação: </strong> { card?.action?.action } { ` ${card?.action?.points} pts.` }</p>
-      <p><strong>Difícil: </strong> { card?.hard?.action } { ` ${card?.hard?.points} pts.` }</p>
-      <p><strong>Lazer: </strong> { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }</p>
-      <p><strong>Fácil: </strong> { card?.easy?.action } { ` ${card?.easy?.points} pts.` }</p>
+      <div>
+      Pessoa, profissão ou animal: { card?.person?.action } { ` ${card?.person?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
+    <div>
+      Objeto: { card?.object?.action } { ` ${card?.object?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
+    <div>
+      Ação: { card?.action?.action } { ` ${card?.action?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
+    <div>
+      Difícil: { card?.hard?.action } { ` ${card?.hard?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
+    <div>
+      Lazer: { card?.leasure?.action } { ` ${card?.leasure?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
+    <div>
+      Fácil: { card?.easy?.action } { ` ${card?.easy?.points} pts.` }
+      <button className="thumbs-up"><FontAwesomeIcon icon={faThumbsUp} /></button>
+      <button className="thumbs-down"><FontAwesomeIcon icon={faThumbsDown} /></button>
+    </div>
     </div>
     <button id='bution' onClick={ newCard }>Gerar</button>
     </div>

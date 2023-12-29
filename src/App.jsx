@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import data from './assets/data';
 import Card from './Card';
 import Dice from './Dice';
 
