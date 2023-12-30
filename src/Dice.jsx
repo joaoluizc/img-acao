@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import data from './assets/data';
 import './Dice.css';
-import Context from './Context';
 
 function Dice() {
   const [dice, setDice] = useState('');
