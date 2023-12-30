@@ -14,6 +14,13 @@ function Provider(props) {
     setTurn(turn === 'teamA' ? 'teamB' : 'teamA');
   };
 
+  const resetPoints = () => {
+    setPoints({
+      teamA: 0,
+      teamB: 0,
+    });
+  }
+
   const addPoints = (amount) => {
     if (turn === 'teamA') {
       setPoints({ ...points, teamA: points.teamA + amount });
@@ -26,6 +33,7 @@ function Provider(props) {
   const data = {
     points,
     addPoints,
+    resetPoints,
     turn,
     switchTurn,
   };
