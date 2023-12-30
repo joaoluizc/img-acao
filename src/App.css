@@ -1,7 +1,23 @@
 body {
     font-family: sans-serif;
+    background-color: #DCE5DD;
 }
 
+.vezWrapper{
+    font-family: sans-serif;
+    color: #4A5759;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.turn{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    color: #CE796B;
+
+}
 
 .appWrapper {
     display: flex;
@@ -9,23 +25,24 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    
 }
 
 .titleWrapper {
     font-family: sans-serif;
-    color: rgb(50, 131, 29);
+    color: #4A5759;
 }
 
 .pontosWrapper {
     font-family: sans-serif;
-    color: rgb(50, 131, 29);
+    color: #4A5759;
     font-size: 20px;
 }
 
 .points-team-a {
-color: red;
+color: #CE796B;
 }
 
 .points-team-b {
-    color: red;
+    color: #CE796B;
 }
