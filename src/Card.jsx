@@ -118,7 +118,6 @@ function Card () {
       </div>
     </div>
     <div>
-
     <span className='spani'><FontAwesomeIcon icon={faF} /></span>
     <span className='ruan'> { card?.easy?.action }</span>  
     <span className='points'>{ ` ${card?.easy?.points} pts.` } </span>

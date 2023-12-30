@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Context from './Context';
 import { useState } from 'react';
 
@@ -34,5 +36,9 @@ function Provider(props) {
     </Context.Provider>
   );
 }
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Provider;

@@ -12,8 +12,10 @@
   padding: 10px;
   font-family: sans-serif;
 }
-.cardi{
-  font-family: sans-serif;
+.cardi {
+  font-family: 'Lora', serif;
+  font-family: 'Raleway', sans-serif;
+  
 }
 .cardWrapper {
   display: flex;
@@ -22,11 +24,13 @@
 }
 
 .thumbs-down {
-  background-color: red;
+  background-color: #EAC3C5;
+  color: rgb(46, 2, 2);
 }
 
 .thumbs-up {
-  background-color: green;
+ background-color: #C6DEA6;
+ color: #085008;
 }
 
 
@@ -63,11 +67,11 @@
   
  align-self: baseline;
   font-family: sans-serif;
-  color: red;
+  color: #5c3d52;
   font-size: 20px;
 }
 
 
 .points {
-  color: blue;
+  color: #8a5f7c;
 }
