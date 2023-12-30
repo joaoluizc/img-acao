@@ -5,8 +5,8 @@ function TurnBoard () {
   const { turn } = useContext(Context);
   return (
   <div>
-    <h2 className='vezWrapper'>Vez</h2>
-    <div id="turn">{ turn === 'teamA' ? 'Time A' : 'Time B' }</div>
+    <h2 className='vezWrapper'><strong>Vez</strong></h2>
+    <div id="turn"> <strong>{ turn === 'teamA' ? 'Time A' : 'Time B' }</strong></div>
   </div>
   )
 }

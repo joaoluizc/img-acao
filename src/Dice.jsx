@@ -16,7 +16,7 @@ function Dice() {
       
       
         <h3 className='dado'>Dado</h3>
-        <div className="action">{ dice }</div>
+        <div className="action"><strong>{ dice }</strong></div>
       
       <button onClick={ rollDice }><strong>Rolar Dado</strong></button>
     </div>

@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Card from './Card';
 import Dice from './Dice';
 import ScoreBoard from './ScoreBoard';
