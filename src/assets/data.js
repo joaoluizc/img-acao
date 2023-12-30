@@ -64,7 +64,6 @@ const easy = [
   {"type": "Fácil", "action": "Soltar", "points": 3},
 ];
 
-
 const object = [
   {"type": "Objeto", "action": "Lápis", "points": 3},
   {"type": "Objeto", "action": "Livro", "points": 4},
