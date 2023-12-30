@@ -236,6 +236,12 @@ const categoriesMapping = {
   'Lazer': 'leasure',
 };
 
+const modifiers = [
+  'faça mímica em dupla',
+  'pode usar efeitos sonoros (sem palavras!)',
+  'escolha a categoria',
+];
+
 export default {
   categoriesMapping,
   categories,
@@ -245,6 +251,7 @@ export default {
   action,
   hard,
   leasure,
+  modifiers,
 };
 
 //modificadores: em dupla, com efeitos sonoros (sem palavras), escolha a categoria
