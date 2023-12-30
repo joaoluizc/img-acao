@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+}
+
+
+.appWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.titleWrapper {
+    font-family: sans-serif;
+    color: rgb(50, 131, 29);
+}
+
+.pontosWrapper {
+    font-family: sans-serif;
+    color: rgb(50, 131, 29);
+    font-size: 20px;
+}
+
+.points-team-a {
+color: red;
+}
+
+.points-team-b {
+
+}
