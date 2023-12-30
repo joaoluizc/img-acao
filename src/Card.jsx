@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import data from './assets/data';
 import './Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +17,9 @@ const initialCard = {
 function Card ({ addPoints, switchTurn }) {
 
   const [card, setCard] = useState(initialCard);
+
+  useEffect(() => { newCard(); }, []);
+
 
   const newCard = () => {
     const newCardData = data.categories.map((category) => {
@@ -42,7 +45,9 @@ function Card ({ addPoints, switchTurn }) {
     <div className='card'>
       <h2 className='cardi'>Card</h2>
       <div id='teste'>
-      <span className='spani'><FontAwesomeIcon icon={faP} /></span> { card?.person?.action } { ` ${card?.person?.points} pts.` }
+      <span className='spani'><FontAwesomeIcon icon={faP} /></span> 
+      <span className='ruan'> { card?.person?.action } </span> 
+      <span className='points'> { ` ${card?.person?.points} pts.` }</span>
       </div>
   <div className='botoes'>
       <button
@@ -53,8 +58,10 @@ function Card ({ addPoints, switchTurn }) {
       </button>
       <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
     </div>
-    <div>
-    <span className='spani'><FontAwesomeIcon icon={faO} /></span> { card?.object?.action } { ` ${card?.object?.points} pts.` }
+    <div className='itemWrapper'>
+    <span className='spani'><FontAwesomeIcon icon={faO} /></span> 
+    <span className='ruan'> { card?.object?.action } </span> 
+    <span className='points'> { ` ${card?.object?.points} pts.` } </span>
     <div className='botoes'>
       <button
         className="thumbs-up"
@@ -66,7 +73,9 @@ function Card ({ addPoints, switchTurn }) {
       </div>
     </div>
     <div>
-    <span className='spani'><FontAwesomeIcon icon={faA} /></span> { card?.action?.action } { ` ${card?.action?.points} pts.` }
+    <span className='spani'><FontAwesomeIcon icon={faA} /></span> 
+    <span className='ruan'> { card?.action?.action } </span>
+    <span className='points'> { ` ${card?.action?.points} pts.` }</span>
     <div className='botoes'>
       <button
         className="thumbs-up"
@@ -78,7 +87,9 @@ function Card ({ addPoints, switchTurn }) {
       </div>
     </div>
     <div>
-    <span className='spani'><FontAwesomeIcon icon={faD} /></span> { card?.hard?.action } { ` ${card?.hard?.points} pts.` }
+    <span className='spani'><FontAwesomeIcon icon={faD} /></span> 
+    <span className='ruan'> { card?.hard?.action }</span> 
+    <span className='points'>{ ` ${card?.hard?.points} pts.` } </span>
       <div className='botoes'>
       <button
         className="thumbs-up"
@@ -91,7 +102,8 @@ function Card ({ addPoints, switchTurn }) {
     </div>
     <div>
     <span className='spani'><FontAwesomeIcon icon={faL} /></span> 
-    <span className='ruan'>{ card?.leasure?.action } </span> <span>{ ` ${card?.leasure?.points} pts.` }</span>
+    <span className='ruan'>{ card?.leasure?.action } </span> 
+    <span className='points'>{ ` ${card?.leasure?.points} pts.` }</span>
     <div className='botoes'>
       <button
         className="thumbs-up"
@@ -103,8 +115,11 @@ function Card ({ addPoints, switchTurn }) {
       </div>
     </div>
     <div>
+
     <span className='spani'><FontAwesomeIcon icon={faF} /></span>
-    <span className='ruan'> { card?.easy?.action }</span>  { ` ${card?.easy?.points} pts.` }
+    <span className='ruan'> { card?.easy?.action }</span>  
+    <span className='points'>{ ` ${card?.easy?.points} pts.` } </span>
+
     <div className='botoes'>
       <button
         className="thumbs-up"

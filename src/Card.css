@@ -25,6 +25,11 @@
   background-color: red;
 }
 
+.thumbs-up {
+  background-color: green;
+}
+
+
 .spani {
  font-size: 20px;
  margin-top: 10px;
@@ -40,16 +45,29 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin-top: 14px;
   margin-bottom: 10px;
 
 }
 
 #bution {
-  margin-top: 15px;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  
 
 }
 
 .ruan {
+  
+ align-self: baseline;
+  font-family: sans-serif;
   color: red;
+  font-size: 20px;
+}
+
+
+.points {
+  color: blue;
 }
