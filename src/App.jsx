@@ -8,8 +8,10 @@ function App() {
   return (
     <div className='appWrapper'>
       <h1 className='titleWrapper'>Imagem & Ação</h1>
+      <div className='sideWrapper'>
       <ScoreBoard />
       <TurnBoard />
+      </div>
       <Dice />
       <Card/>
     </div>
