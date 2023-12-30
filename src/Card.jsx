@@ -6,6 +6,11 @@ import Context from './Context';
 import { faP , faO, faA , faD, faCircleCheck, faCircleXmark, faL, faF, } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
+Card.propTypes = {
+  addPoints: PropTypes.func.isRequired,
+  switchTurn: PropTypes.func.isRequired,
+};
+
 const initialCard = {
   'person': {"type": "Pessoa", "action": "Cachorro", points: 1},
   'object': {"type": "Objeto", "action": "Xadrez", points: 1},
@@ -21,6 +26,15 @@ function Card () {
 
   useEffect(() => { newCard(); }, []);
 
+  const clickCorrect = (points) => {
+    addPoints(points);
+    newCard();
+  };
+
+  const clickWrong = () => {
+    newCard();
+    switchTurn();
+  };
 
   const newCard = () => {
     const newCardData = data.categories.map((category) => {
@@ -34,11 +48,6 @@ function Card () {
     });
     console.log(newCardDataObject);
     setCard(newCardDataObject);
-  };
-   
-  Card.propTypes = {
-    addPoints: PropTypes.func.isRequired,
-    switchTurn: PropTypes.func.isRequired,
   };
 
   useEffect(() => { newCard() }, []);
@@ -55,11 +64,11 @@ function Card () {
   <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.person?.points) }
+        onClick={ () => clickCorrect(card?.person?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
-      <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+      <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
     </div>
     <div className='itemWrapper'>
     <span className='spani'><FontAwesomeIcon icon={faO} /></span> 
@@ -68,11 +77,11 @@ function Card () {
     <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.object?.points) }
+        onClick={ () => clickCorrect(card?.object?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
-      <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+      <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
       </div>
     </div>
     <div>
@@ -82,11 +91,11 @@ function Card () {
     <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.action?.points) }
+        onClick={ () => clickCorrect(card?.action?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
-      <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+      <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
       </div>
     </div>
     <div>
@@ -96,11 +105,11 @@ function Card () {
       <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.hard?.points) }
+        onClick={ () => clickCorrect(card?.hard?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
-      <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+      <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
       </div>
     </div>
     <div>
@@ -110,11 +119,11 @@ function Card () {
     <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.leasure?.points) }
+        onClick={ () => clickCorrect(card?.leasure?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
-      <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+      <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
       </div>
     </div>
     <div>
@@ -126,12 +135,12 @@ function Card () {
     <div className='botoes'>
       <button
         className="thumbs-up"
-        onClick={ () => addPoints(card?.easy?.points) }
+        onClick={ () => clickCorrect(card?.easy?.points) }
       >
         <FontAwesomeIcon icon={faCircleCheck} />
       </button>
       
-    <button className="thumbs-down" onClick={switchTurn}><FontAwesomeIcon icon={faCircleXmark} /></button>
+    <button className="thumbs-down" onClick={clickWrong}><FontAwesomeIcon icon={faCircleXmark} /></button>
     
     </div>
     
