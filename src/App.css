@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: #DCE5DD;
 }
 
 .vezWrapper{
@@ -24,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #DCE5DD;
+    
 }
 
 .titleWrapper {
