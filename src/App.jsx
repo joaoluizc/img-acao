@@ -1,26 +1,10 @@
-import React, { useState } from 'react';
+import { useContext } from 'react';
 import Card from './Card';
 import Dice from './Dice';
+import Context from './Context';
 
 function App() {
-  const [points, setPoints] = useState({
-    teamA: 0,
-    teamB: 0,
-  });
-  const [turn, setTurn] = useState('teamA');
-
-  const addPoints = (amount) => {
-    if (turn === 'teamA') {
-      setPoints({ ...points, teamA: points.teamA + amount });
-    } else {
-      setPoints({ ...points, teamB: points.teamB + amount });
-    }
-    switchTurn();
-  };
-
-  const switchTurn = () => {
-    setTurn(turn === 'teamA' ? 'teamB' : 'teamA');
-  };
+  const { points, turn } = useContext(Context);
 
   return (
     <>
@@ -35,7 +19,7 @@ function App() {
         <div id="turn">{ turn === 'teamA' ? 'Time A' : 'Time B' }</div>
       </div>
       <Dice />
-      <Card addPoints={ addPoints } switchTurn={ switchTurn }/>
+      <Card/>
     </>
   )
 }

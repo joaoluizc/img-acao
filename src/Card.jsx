@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import data from './assets/data';
 import './Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import Context from './Context';
 
 const initialCard = {
   'person': {"type": "Pessoa, profissão ou animal", action: "Cachorro", points: 1},
@@ -13,8 +14,8 @@ const initialCard = {
   'easy': {"type": "Fácil", "action": "Sorrir", points: 1},
 };
 
-function Card ({ addPoints, switchTurn }) {
-
+function Card () {
+  const { addPoints, switchTurn } = useContext(Context);
   const [card, setCard] = useState(initialCard);
 
   const newCard = () => {
@@ -30,6 +31,8 @@ function Card ({ addPoints, switchTurn }) {
     console.log(newCardDataObject);
     setCard(newCardDataObject);
   };
+
+  useEffect(() => { newCard() }, []);
 
   return (
     <div className='cardWrapper'>
