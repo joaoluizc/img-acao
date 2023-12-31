@@ -26,7 +26,10 @@ body {
 
 .teamB {
     color: #8ab303; 
+    font-size: 20px;
+    margin-top: 15px;
 }
+
 
 .appWrapper {
     display: flex;
@@ -63,8 +66,7 @@ font-size: 20px;
 
 .points-team-b {
     color: #8ab303; 
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 20px;    
 }
 
 
