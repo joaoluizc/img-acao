@@ -14,6 +14,10 @@ function Dice() {
     if (decideHasModifier) {
       const modifier = data.modifiers[Math.floor(Math.random() * data.modifiers.length)];
       setModifier(modifier);
+      if (modifier === 'escolha a categoria') {
+        setDice('');
+        return;
+      }
     }
     setDice(category);
   }
