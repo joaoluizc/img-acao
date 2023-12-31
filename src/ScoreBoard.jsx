@@ -5,7 +5,7 @@ function ScoreBoard () {
   const { points, resetPoints } = useContext(Context);
   return (
     <div className='pontosWrapper'>
-      <h2>Pontos</h2>
+      <h2 id='points'>Pontos</h2>
       <div className="points-team-a"><strong>Time A: { points.teamA }</strong></div>
       <div className="points-team-b"><strong>Time B: { points.teamB }</strong></div>
       <button className="reset-points" onClick={resetPoints}>Reset Points</button>

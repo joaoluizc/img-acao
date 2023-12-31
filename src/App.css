@@ -6,18 +6,22 @@ body {
 .vezWrapper{
     font-family: sans-serif;
     color: #4A5759;
-    font-size: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: flex-start;
-    width: 50%;
+    width: 45%;
+    background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .teamA {
     color: #CE796B;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 .teamB {
@@ -36,16 +40,20 @@ body {
 .titleWrapper {
     font-family: sans-serif;
     color: #4A5759;
+    font-size: 40px;
 }
 
 .pontosWrapper {
     font-family: sans-serif;
     color: #4A5759;
-    font-size: 25px;
-    width: 50% !important;
+    
+    width: 45% !important;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .points-team-a {
@@ -66,4 +74,25 @@ font-size: 20px;
     width: 80%;
     justify-content: space-between;
 
+}
+
+.reset-points{
+    background-color: #688D6C;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 25px;
+}
+
+
+.modifier {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }

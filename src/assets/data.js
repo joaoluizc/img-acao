@@ -52,7 +52,6 @@ const easy = [
   {"type": "Fácil", "action": "Beijar", "points": 5},
   {"type": "Fácil", "action": "Ouvir", "points": 2},
   {"type": "Fácil", "action": "Observar", "points": 1},
-  {"type": "Fácil", "action": "Sorrir", "points": 3},
   {"type": "Fácil", "action": "Pular corda", "points": 4},
   {"type": "Fácil", "action": "Caminhar", "points": 2},
   {"type": "Fácil", "action": "Saltar", "points": 1},
